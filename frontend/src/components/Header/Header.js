@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
-import { 
-    Navbar, 
-    NavbarToggler, 
-    NavbarBrand, 
-    Nav, 
-    NavItem, 
-    NavLink, 
-    Collapse 
+import {
+    Navbar,
+    NavbarToggler,
+    NavbarBrand,
+    Nav,
+    NavItem,
+    NavLink,
+    Collapse
 } from 'reactstrap';
 
 export default class Header extends Component {
@@ -20,18 +20,18 @@ export default class Header extends Component {
         const { isOpen } = this.state
         return (
             <header>
-                <Navbar color="faded" toggleable inverse className="bg-primary navbar-expand-sm navbar-dark">
-                    <NavbarToggler right onClick={this.toggleNavbar} />
+                <Navbar color="faded" expand dark className="bg-primary navbar-expand-sm navbar-dark">
+                    <NavbarToggler onClick={this.toggleNavbar} />
                     <NavbarBrand href="/">Live Class</NavbarBrand>
                     <Collapse isOpen={isOpen} navbar>
                         <Nav navbar>
                             <NavItem>
-                                <NavLink to="/bills">Bill</NavLink>
+                                <NavLink href="/bills">Bill</NavLink>
                             </NavItem>
                         </Nav>
                     </Collapse>
                 </Navbar>
             </header>
-        )        
+        )
     }
 }
